@@ -89,9 +89,9 @@ class FacebookClient
      * Instantiates a new FacebookClient object.
      *
      * @param FacebookHttpClientInterface|null $httpClientHandler
-     * @param boolean                          $enableBeta
+     * @param boolean $enableBeta
      */
-    public function __construct(FacebookHttpClientInterface $httpClientHandler = null, $enableBeta = false)
+    public function __construct(?FacebookHttpClientInterface $httpClientHandler = null, bool $enableBeta = false)
     {
         $this->httpClientHandler = $httpClientHandler ?: $this->detectHttpClientHandler();
         $this->enableBetaMode = $enableBeta;
@@ -102,7 +102,7 @@ class FacebookClient
      *
      * @param FacebookHttpClientInterface $httpClientHandler
      */
-    public function setHttpClientHandler(FacebookHttpClientInterface $httpClientHandler)
+    public function setHttpClientHandler(FacebookHttpClientInterface $httpClientHandler): void
     {
         $this->httpClientHandler = $httpClientHandler;
     }
