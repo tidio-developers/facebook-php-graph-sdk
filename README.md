@@ -1,3 +1,5 @@
+This fork is the result of the incompatibility of the original package against PHP 8.4 requirements. 
+
 # Facebook SDK for PHP (v5)
 
 [![Build Status](https://img.shields.io/travis/facebook/php-graph-sdk/5.x.svg)](https://travis-ci.org/facebook/php-graph-sdk)
